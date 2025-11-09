@@ -8,17 +8,17 @@ Stefan Sonnenberg-Carstens <stefan.sonnenberg.carstens@gmail.com>
 :showcomments:
 :gitrepo: https://github.com/pragdevops/pragdevopsbook
 :code_dir: code
-:image_dir: imagens
+:image_dir: images
+:icons:
 :toc: left
+include::locale/attributes.adoc[]
 
 Ein Buch über die Prinzipien und Praktiken von DevOps, das sich auf pragmatische Ansätze konzentriert, um die Zusammenarbeit zwischen Entwicklungs- und Betriebsteams zu verbessern und die Effizienz in der Softwarebereitstellung zu steigern.
 
 include::chapters/preface.adoc[]
 
-== Einführung
-
+= Einführung
 == Kapitel 1: Was ist DevOps?
-
 == Kapitel 2: Die Kultur von DevOps
 == Kapitel 3: Automatisierung in DevOps
 == Versionskontrolle
