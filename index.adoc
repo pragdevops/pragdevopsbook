@@ -17,6 +17,11 @@ Ein Buch über die Prinzipien und Praktiken von DevOps, das sich auf pragmatisch
 == Kapitel 3: Automatisierung in DevOps
 == Versionskontrolle
 === Einführung in Versionskontrolle 
+= Git
+== Branching Stragegien
+=== Trunk
+==== Gitflow
+==== Feature Branches
 ==== Vorteile der Versionskontrolle
 ==== Beliebte Versionskontrollsysteme
 - Git
@@ -90,6 +95,7 @@ Certificate Store Management
 === Recreate
 === Shadow Deployment
 === A/B Testing
+=== Feature Toggle
 
 == Service Reliability Engineering
 

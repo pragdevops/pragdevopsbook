@@ -1,0 +1,42 @@
+name: Render Asciidoc sources to PDF and publish as GitHub artefact
+
+on:
+  push:
+    branches: ["main"]
+
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  # Build job
+  deploy:
+    environment:
+      name: pragdevopsbook -production
+    runs-on: ubuntu-latest
+    env:
+    steps:
+      - name: Install Asciidoctor
+        run: sudo apt install asciidoctor ruby-asciidoctor-pdf
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - name: Render PDF
+        run: asciidoctor-pdf index.adoc --out-file thepragmaticdevopsengineer.pdf
+      - uses: actions/upload-artifact@v4
+        name: thepragmaticdevopsengineer
+        path: thepragmaticdevopsengineer.pdf
+
