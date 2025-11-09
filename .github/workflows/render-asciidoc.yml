@@ -30,7 +30,7 @@ jobs:
       SMARTIE: false
     steps:
       - name: Install Asciidoctor
-        run: sudo apt install asciidoctor ruby-asciidoctor-pdf
+        run: sudo apt install asciidoctor ruby-asciidoctor-pdf ruby-asciidoctor-plantuml
       - name: Checkout
         uses: actions/checkout@v4
         with:
