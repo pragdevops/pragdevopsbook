@@ -1,0 +1,120 @@
+= The Pragmatic DevOps Engineer
+Stefan Sonnenberg-Carstens <stefan.sonnenberg.carstens@gmail.com>
+:version: 1.0.0
+:lang: de
+:title: Der pragmatische DevOps Engineer
+:revdate: 2025-10-30
+:doctype: book
+:toc: left
+
+Ein Buch über die Prinzipien und Praktiken von DevOps, das sich auf pragmatische Ansätze konzentriert, um die Zusammenarbeit zwischen Entwicklungs- und Betriebsteams zu verbessern und die Effizienz in der Softwarebereitstellung zu steigern.
+
+== Einführung
+
+== Kapitel 1: Was ist DevOps?
+
+== Kapitel 2: Die Kultur von DevOps
+== Kapitel 3: Automatisierung in DevOps
+== Versionskontrolle
+=== Einführung in Versionskontrolle 
+==== Vorteile der Versionskontrolle
+==== Beliebte Versionskontrollsysteme
+- Git
+- Subversion (SVN)
+- Mercurial
+- Fossil
+- Perforce
+- CVS
+- SCCS
+- RCS
+- BitKeeper
+- Game of Trees (GoT)
+==== Best Practices für Versionskontrolle
+=== Continuous Integration (CI)
+
+=== HashiCorp Vault
+=== Jenkins
+=== GitLab CI/CD
+=== GitHub Actions
+=== CircleCI
+=== Travis CI
+=== Jenkins X
+=== GoCD
+=== Spinnaker   
+=== Argo CD
+=== Helm
+=== Prometheus
+=== Grafana
+=== ELK Stack (Elasticsearch, Logstash, Kibana)
+=== Splunk
+=== Datadog
+=== Snyk
+=== Trivy
+=== Aqua Security
+
+=== PKI
+=== Certificate Management
+=== CA 
+- Hierarchie
+- Root CA
+- Intermediate CA
+- Issuing CA
+- Revocation
+- OCSP
+- CRL
+- Automation
+-- Let's Encrypt
+OpenSSL
+OpenCA
+Certificate Store Management
+- Windows Certificate Store
+- Linux Certificate Store
+- Java Keystore
+- Cloud Certificate Management
+
+=== Secret Management    
+
+== Kapitel 4: Continuous Integration und Continuous Deployment (CI/CD)
+== Kapitel 5: Infrastruktur als Code
+== Kapitel 6: Überwachung und Logging
+== Kapitel 7: Sicherheit in DevOps
+== Kapitel 8: Fallstudien und Best Practices
+== Softwarearchitektur für DevOps
+
+== Deployment-Strategien
+
+=== Blue/Green
+=== Canary
+=== Big-Bang
+=== Rolling Deployment
+=== Recreate
+=== Shadow Deployment
+=== A/B Testing
+
+== Service Reliability Engineering
+
+=== Chaos Engineering
+
+=== Packer
+=== Terraform / OpenTofu
+=== Ansible / Windows DSC
+=== Docker
+=== Docker Swarm
+=== HashiCorp Nomad
+=== Kubernetes
+
+
+=== Einführung in Softwarearchitekturen
+==== Architekturprinzipien
+==== Wichtige Architekturmuster
+- Schichtenarchitektur
+- Client-Server-Architektur
+- Ereignisgesteuerte Architektur
+- Serviceorientierte Architektur (SOA)
+- Microkernel-Architektur
+==== Auswahl der richtigen Architektur
+=== Monolith
+=== Microservices
+=== Serverless
+=== Self-Contained Systems
+== Fazit
