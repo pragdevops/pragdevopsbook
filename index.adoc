@@ -1,13 +1,19 @@
 = The Pragmatic DevOps Engineer
 Stefan Sonnenberg-Carstens <stefan.sonnenberg.carstens@gmail.com>
-:version: 1.0.0
+:version: 0.0.1
 :lang: de
 :title: Der pragmatische DevOps Engineer
-:revdate: 2025-10-30
+:revdate: 2025-11-09
 :doctype: book
+:showcomments:
+:gitrepo: https://github.com/pragdevops/pragdevopsbook
+:code_dir: code
+:image_dir: imagens
 :toc: left
 
 Ein Buch über die Prinzipien und Praktiken von DevOps, das sich auf pragmatische Ansätze konzentriert, um die Zusammenarbeit zwischen Entwicklungs- und Betriebsteams zu verbessern und die Effizienz in der Softwarebereitstellung zu steigern.
+
+include::chapters/preface.adoc[]
 
 == Einführung
 
@@ -17,6 +23,12 @@ Ein Buch über die Prinzipien und Praktiken von DevOps, das sich auf pragmatisch
 == Kapitel 3: Automatisierung in DevOps
 == Versionskontrolle
 === Einführung in Versionskontrolle 
+== Versionierung
+=== Semantische Versionierung
+=== Kalender Versionierung
+=== Release Train
+=== Interne vs. Externe Versionierung
+
 = Git
 == Branching Stragegien
 === Trunk
@@ -109,6 +121,10 @@ Certificate Store Management
 === HashiCorp Nomad
 === Kubernetes
 
+== Abhängigkeitsverwaltung
+=== Direkte und transitive Abhängigkeiten
+=== Explizit vs Implizit
+=== Version Pinning
 
 === Einführung in Softwarearchitekturen
 ==== Architekturprinzipien
