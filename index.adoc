@@ -10,7 +10,10 @@ Stefan Sonnenberg-Carstens <stefan.sonnenberg.carstens@gmail.com>
 :code_dir: code
 :image_dir: images
 :icons:
+:plantuml-server-url: http://localhost:8080/uml
+:plantuml-server-type: plantuml
 :toc: left
+
 include::locale/attributes.adoc[]
 
 Ein Buch über die Prinzipien und Praktiken von DevOps, das sich auf pragmatische Ansätze konzentriert, um die Zusammenarbeit zwischen Entwicklungs- und Betriebsteams zu verbessern und die Effizienz in der Softwarebereitstellung zu steigern.
@@ -139,4 +142,15 @@ Certificate Store Management
 === Microservices
 === Serverless
 === Self-Contained Systems
+
+[plantuml, format="png"]
+....
+@startuml
+Alice -> Bob: Authentication Request
+Bob --> Alice: Authentication Response
+
+Alice -> Bob: Another authentication Request
+Alice <-- Bob: another authentication Response
+@enduml
+....
 == Fazit
