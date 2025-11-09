@@ -37,5 +37,6 @@ jobs:
       - name: Render PDF
         run: asciidoctor-pdf index.adoc --out-file thepragmaticdevopsengineer.pdf
       - uses: actions/upload-artifact@v4
-        name: thepragmaticdevopsengineer
-        path: thepragmaticdevopsengineer.pdf
+        with:
+          name: thepragmaticdevopsengineer
+          path: thepragmaticdevopsengineer.pdf
