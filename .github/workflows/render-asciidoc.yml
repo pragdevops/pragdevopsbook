@@ -27,6 +27,7 @@ jobs:
       name: pragdevopsbook -production
     runs-on: ubuntu-latest
     env:
+      SMARTIE: false
     steps:
       - name: Install Asciidoctor
         run: sudo apt install asciidoctor ruby-asciidoctor-pdf
