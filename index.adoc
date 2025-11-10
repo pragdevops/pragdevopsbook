@@ -10,13 +10,15 @@ Stefan Sonnenberg-Carstens <stefan.sonnenberg.carstens@gmail.com>
 :code_dir: code
 :image_dir: images
 :icons:
-:plantuml-server-url: http://localhost:8080/uml
-:plantuml-server-type: plantuml
+:allow-uri-read: true
 :toc: left
 
 include::locale/attributes.adoc[]
 
+image::https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg[Tux,250,350]
+
 Ein Buch über die Prinzipien und Praktiken von DevOps, das sich auf pragmatische Ansätze konzentriert, um die Zusammenarbeit zwischen Entwicklungs- und Betriebsteams zu verbessern und die Effizienz in der Softwarebereitstellung zu steigern.
+
 
 include::chapters/preface.adoc[]
 
@@ -31,6 +33,8 @@ include::chapters/preface.adoc[]
 === Kalender Versionierung
 === Release Train
 === Interne vs. Externe Versionierung
+
+
 
 = Git
 == Branching Stragegien
@@ -143,14 +147,13 @@ Certificate Store Management
 === Serverless
 === Self-Contained Systems
 
-[plantuml, format="png"]
-....
+[plantuml, format="png", id="auth"]
+----
 @startuml
-Alice -> Bob: Authentication Request
-Bob --> Alice: Authentication Response
-
-Alice -> Bob: Another authentication Request
-Alice <-- Bob: another authentication Response
+User -> (Start)
+User --> (Use the application) : Label
 @enduml
-....
+----
+
 == Fazit
+Sample
