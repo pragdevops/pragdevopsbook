@@ -11,6 +11,18 @@ Stefan Sonnenberg-Carstens <stefan.sonnenberg.carstens@gmail.com>
 :image_dir: images
 :icons:
 :allow-uri-read: true
+:title-logo-image: images/pragdevops-logo.png
+:experimental:
+:reproducible:
+:icons: font
+:listing-caption: Listing
+:sectnums:
+:toc:
+:toclevels: 3
+:xrefstyle: short
+// ifdef::backend-pdf[]
+// :pdf-theme: chronicles
+:toc-placement: preamble
 :toc: left
 
 include::locale/attributes.adoc[]
@@ -134,6 +146,7 @@ Certificate Store Management
 === Version Pinning
 
 === Einführung in Softwarearchitekturen
+- CAP Theorem
 ==== Architekturprinzipien
 ==== Wichtige Architekturmuster
 - Schichtenarchitektur
@@ -141,11 +154,16 @@ Certificate Store Management
 - Ereignisgesteuerte Architektur
 - Serviceorientierte Architektur (SOA)
 - Microkernel-Architektur
+- Design for failure
+- Backpressure
 ==== Auswahl der richtigen Architektur
 === Monolith
+=== Modulith
 === Microservices
 === Serverless
+=== Function as a Service
 === Self-Contained Systems
+=== Backend for Frontend
 
 [plantuml, format="png", id="auth"]
 ----
