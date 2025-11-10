@@ -2,7 +2,7 @@
 Stefan Sonnenberg-Carstens <stefan.sonnenberg.carstens@gmail.com>
 :version: 0.0.1
 :lang: de
-:title: Der pragmatische DevOps Engineer
+:title: Der pragmatische DevOps Engineer: Eine praktische Einführung
 :revdate: 2025-11-09
 :doctype: book
 :showcomments:
@@ -11,7 +11,7 @@ Stefan Sonnenberg-Carstens <stefan.sonnenberg.carstens@gmail.com>
 :image_dir: images
 :icons:
 :allow-uri-read: true
-:title-logo-image: images/pragdevops-logo.png
+:title-logo-image: images/pragdevops-cover.png
 :experimental:
 :reproducible:
 :icons: font
@@ -26,8 +26,6 @@ Stefan Sonnenberg-Carstens <stefan.sonnenberg.carstens@gmail.com>
 :toc: left
 
 include::locale/attributes.adoc[]
-
-image::https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg[Tux,250,350]
 
 Ein Buch über die Prinzipien und Praktiken von DevOps, das sich auf pragmatische Ansätze konzentriert, um die Zusammenarbeit zwischen Entwicklungs- und Betriebsteams zu verbessern und die Effizienz in der Softwarebereitstellung zu steigern.
 
@@ -175,3 +173,6 @@ User --> (Use the application) : Label
 
 == Fazit
 Sample
+
+[bibliography]
+= Quellen
