@@ -38,7 +38,7 @@ jobs:
         with:
           submodules: recursive
       - name: Render PDF
-        run: asciidoctor-pdf index.adoc --out-file thepragmaticdevopsengineer.pdf
+        run: asciidoctor-pdf -a allow-uri-read -r asciidoctor-diagram index.adoc --out-file thepragmaticdevopsengineer.pdf
       - uses: actions/upload-artifact@v4
         with:
           name: thepragmaticdevopsengineer
