@@ -47,7 +47,11 @@ include::chapters/preface.adoc[]
 
 
 = Git
+== Monorepo vs. Multirepo
 == Branching Stragegien
+== Code Signing
+=== PGP
+=== SSH Keys
 === Trunk
 ==== Gitflow
 ==== Feature Branches
@@ -173,6 +177,11 @@ User --> (Use the application) : Label
 
 == Fazit
 Sample
+
+== PaaS
+=== Heroku
+=== Dokku
+=== Kamal
 
 [bibliography]
 = Quellen
