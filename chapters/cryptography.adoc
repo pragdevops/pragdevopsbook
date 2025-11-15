@@ -2,3 +2,98 @@
 Ich starte mit der wichtigsten Aussage zum Thema Kryptografie:
 
 WARNING: Implementiere Kryptografie niemals selbst. Das Risiko einer fehlerhaften Implementierung ist zu groß.
+
+Das Schreiben von Krypto-Code sollte man Profis überlassen; es gibt eine Myriade von Möglichkeiten zum Scheitern und die haben andere hinter sich und hoffentlich behoben und daraus gelernt. Nutze stattdessen verfügbare Implementierungen, wenn möglich solche mit einer Open Source Lizenz, einer großen Gemeinschaft von Beitragenden und einem vernünftigen Umgang bei der Behebung von Schwachstellen. Bibliotheken in dieser Kategorie sind <<BouncyCastle>>, <<OpenSSL>> oder <<WolfSSL>>. Es lohnt auch zu schauen, welche Bibliotheken im konkreten Kontext häufig eingesetzt werden, denn das hängt möglicherweise von der verwendeten Programmiersprache, den Frameworks, weiteren Bibliotheken und dem Ökosystem allgemein ab. Besonders Frameworks können sich Fehler hier nicht leisten. Das zu nutzen, was <<Spring>>, <<Tomcat>> oder <<Go>> selbst nutzen, dürfte eine einigermaßen sichere Wette sein.
+
+Kryptografie wird genutzt, um die Vertraulichkeit, Integrität, Authentizität und die Verbindlichkeit von Informationen sicherzustellen, wenn auch nicht notwendigerweise alles zurselben Zeit.
+
+Kryptografie kommt in drei Szenarien zum Einsatz:
+
+- Während der Übertragung (*in transit*)
+- Während der Speicherung (*at rest*)
+- Während der Ausführung (*in use*)
+
+
+
+Die folgende Zeile Shell liefert eine Liste der Ciphers, die OpenSSL unterstützt:
+
+[source, console]
+$ for c in $(openssl ciphers | tr ":" "\n"); do echo $c; done
+
+Möchte man wissen, welche Ciphers von einem Server unterstützt werden, hilft <<nmap>> weiter:
+
+[source, console]
+----
+$ nmap --script ssl-enum-ciphers -p 443 www.google.com
+Starting Nmap 7.95 ( https://nmap.org ) at 2025-11-15 21:23 CET
+Nmap scan report for www.google.com (142.250.186.68)
+Host is up (0.016s latency).
+Other addresses for www.google.com (not scanned): 2a00:1450:4001:801::2004
+rDNS record for 142.250.186.68: fra24s05-in-f4.1e100.net
+
+PORT    STATE SERVICE
+443/tcp open  https
+| ssl-enum-ciphers:
+|   TLSv1.0:
+|     ciphers:
+|       TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA (ecdh_x25519) - A
+|       TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (ecdh_x25519) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|     compressors:
+|       NULL
+|     cipher preference: server
+|     warnings:
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|   TLSv1.1:
+|     ciphers:
+|       TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA (ecdh_x25519) - A
+|       TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (ecdh_x25519) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|     compressors:
+|       NULL
+|     cipher preference: server
+|     warnings:
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|   TLSv1.2:
+|     ciphers:
+|       TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA (ecdh_x25519) - A
+|       TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256 (ecdh_x25519) - A
+|       TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA (ecdh_x25519) - A
+|       TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384 (ecdh_x25519) - A
+|       TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256 (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256 (ecdh_x25519) - A
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - C
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|     compressors:
+|       NULL
+|     cipher preference: client
+|     warnings:
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|   TLSv1.3:
+|     ciphers:
+|       TLS_AKE_WITH_AES_128_GCM_SHA256 (ecdh_x25519) - A
+|       TLS_AKE_WITH_AES_256_GCM_SHA384 (ecdh_x25519) - A
+|       TLS_AKE_WITH_CHACHA20_POLY1305_SHA256 (ecdh_x25519) - A
+|     cipher preference: client
+|_  least strength: C
+
+Nmap done: 1 IP address (1 host up) scanned in 2.58 seconds
+
+----
+
+

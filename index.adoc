@@ -9,6 +9,7 @@ Stefan Sonnenberg-Carstens <stefan.sonnenberg.carstens@gmail.com>
 :gitrepo: https://github.com/pragdevops/pragdevopsbook
 :code_dir: code
 :image_dir: images
+:hide-uri-scheme:
 :icons:
 :allow-uri-read: true
 :title-logo-image: images/pragdevops-cover.png
@@ -33,6 +34,8 @@ Ein Buch über die Prinzipien und Praktiken von DevOps, das sich auf pragmatisch
 include::chapters/preface.adoc[]
 
 include::chapters/cryptography.adoc[]
+
+include::chapters/tools.adoc[]
 
 
 = Einführung
@@ -192,5 +195,22 @@ Sample
 === Dokku
 === Kamal
 
+== SOLID
+== CUPID
+== GRASP
+== SLSA
+== SCA
+
+== Lizensierung und Lizenzen
+=== Open vs. Closed Source
+==== Open Source Lizenzen
+===== MIT
+===== BSD
+
+
 [bibliography]
 = Quellen
+* [[[OpenSSL]]] OpenSSL Library https://openssl-library.org/
+* [[[BouncyCastle]]] Bouncy Castle Open-source cryptographic APIs https://www.bouncycastle.org/
+* [[[WolfSSL]]] WolfSSL - Embedded TLS Library https://www.wolfssl.com/
+* [[[nmap]]] Nmap ("Network Mapper") - free and open source utility for network discovery and security auditing https://nmap.org/
