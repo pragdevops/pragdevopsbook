@@ -1,0 +1,4 @@
+== Kryptografie
+Ich starte mit der wichtigsten Aussage zum Thema Kryptografie:
+
+WARNING: Implementiere Kryptografie niemals selbst. Das Risiko einer fehlerhaften Implementierung ist zu groß.

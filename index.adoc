@@ -32,6 +32,9 @@ Ein Buch über die Prinzipien und Praktiken von DevOps, das sich auf pragmatisch
 
 include::chapters/preface.adoc[]
 
+include::chapters/cryptography.adoc[]
+
+
 = Einführung
 == Kapitel 1: Was ist DevOps?
 == Kapitel 2: Die Kultur von DevOps
@@ -118,6 +121,12 @@ Certificate Store Management
 == Kapitel 7: Sicherheit in DevOps
 == Kapitel 8: Fallstudien und Best Practices
 == Softwarearchitektur für DevOps
+
+== Verschlüsselung
+=== Symmetrische Verfahren
+=== Asymetrische Verfahren
+=== Cypher Suites
+=== Post-Quantum Cryptography (PQC)
 
 == Deployment-Strategien
 
