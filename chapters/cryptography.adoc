@@ -3,9 +3,15 @@ Ich starte mit der wichtigsten Aussage zum Thema Kryptografie:
 
 WARNING: Implementiere Kryptografie niemals selbst. Das Risiko einer fehlerhaften Implementierung ist zu groß.
 
-Das Schreiben von Krypto-Code sollte man Profis überlassen; es gibt eine Myriade von Möglichkeiten zum Scheitern und die haben andere hinter sich und hoffentlich behoben und daraus gelernt. Nutze stattdessen verfügbare Implementierungen, wenn möglich solche mit einer Open Source Lizenz, einer großen Gemeinschaft von Beitragenden und einem vernünftigen Umgang bei der Behebung von Schwachstellen. Bibliotheken in dieser Kategorie sind <<BouncyCastle>>, <<OpenSSL>> oder <<WolfSSL>>. Es lohnt auch zu schauen, welche Bibliotheken im konkreten Kontext häufig eingesetzt werden, denn das hängt möglicherweise von der verwendeten Programmiersprache, den Frameworks, weiteren Bibliotheken und dem Ökosystem allgemein ab. Besonders Frameworks können sich Fehler hier nicht leisten. Das zu nutzen, was <<Spring>>, <<Tomcat>> oder <<Go>> selbst nutzen, dürfte eine einigermaßen sichere Wette sein.
+Das Schreiben von Krypto-Code sollte man Profis überlassen; es gibt eine Myriade von Möglichkeiten zum Scheitern und die haben andere hinter sich, hoffentlich behoben und daraus gelernt. Nutze stattdessen verfügbare Implementierungen, wenn möglich solche mit einer Open Source Lizenz, einer großen Gemeinschaft von Beitragenden und einem vernünftigen Umgang bei der Behebung von Schwachstellen. Bibliotheken in dieser Kategorie sind <<BouncyCastle>>, <<OpenSSL>> oder <<WolfSSL>>. Es lohnt auch zu schauen, welche Bibliotheken im konkreten Kontext häufig eingesetzt werden, denn das hängt möglicherweise von der verwendeten Programmiersprache, den Frameworks, weiteren Bibliotheken und dem Ökosystem allgemein ab. Besonders Frameworks können sich Fehler hier nicht leisten. Das zu nutzen, was <<Spring>>, <<Tomcat>> oder <<Go>> selbst nutzen, dürfte eine einigermaßen sichere Wette sein.
 
 Kryptografie wird genutzt, um die Vertraulichkeit, Integrität, Authentizität und die Verbindlichkeit von Informationen sicherzustellen, wenn auch nicht notwendigerweise alles zurselben Zeit.
+
+Um einen relativen schnellen Einstieg in das Thema zu bekommen, musst Du die folgenden Begriffe verstehen:
+
+- Hash: ein Hash ist eine kryptografische *Einwegfunktion*. Man kann von einer Informationen einen Hash berechnen, allerdings von Hash nicht auf die Information zurückschließen. Wenn man allerdings für Informationen Hashes ermittelt und die Hashes gleichen sich, gleichen sich auch die zugrundeliegenden Informationen. So kann man schnell prüfen, ob für eine übertragene Datei der Hash übereinstimmt und damit sicher sein, dass die Datei nach der Übertragung unverändert ist.
+
+- Geheimnis (engl. *secret*): 
 
 Kryptografie kommt in drei Szenarien zum Einsatz:
 
@@ -13,7 +19,8 @@ Kryptografie kommt in drei Szenarien zum Einsatz:
 - Während der Speicherung (*at rest*)
 - Während der Ausführung (*in use*)
 
-
+und hat zwei Geschmacksrichtungen: symmetrische und asymetrische Verschlüsselung.
+Bei der symmetrischen Verschlüsselung werden für das Ver- und Entschlüsseln dasselbe Geheimnis verwendet, bei der asymetrischen Variante unterscheiden sich die Geheimnisse.
 
 Die folgende Zeile Shell liefert eine Liste der Ciphers, die OpenSSL unterstützt:
 
@@ -95,5 +102,19 @@ PORT    STATE SERVICE
 Nmap done: 1 IP address (1 host up) scanned in 2.58 seconds
 
 ----
+
+=== Zertifikatsverwaltung
+
+Zertifikate sind das Brot und Butter Geschäft in Sachen Kryptografie. Zur Verwaltung stehen eine Reihe von Werkzeugen zur Verfügung:
+
+- OpenSSL
+- CFSSL
+- OpenCA
+- EJBCA
+- HashiCorp Vault
+- OpenBao
+- OpenXPKI
+
+==== Certificate Authority
 
 

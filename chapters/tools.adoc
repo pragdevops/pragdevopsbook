@@ -1,3 +1,17 @@
 == Werkzeuge
-Das folgende Kapitel beschreibt Werkzeuge, mit denen man als DevOps zwangsläufig begegnet. Zu jedem gibt es eine kurze Einführung, die wesentlichen Anwendungsgebiete und ein paar Hilfen, wann man die Werkzeuge einsetzt oder sinnvollweise eine Alternative wählen sollte.
+Das folgende Kapitel beschreibt Werkzeuge, mit denen man als DevOps zwangsläufig begegnet. Zu jedem gibt es eine kurze Einführung, die wesentlichen Anwendungsgebiete und ein paar Hilfen, wann man die Werkzeuge einsetzt oder sinnvollweise eine Alternative wählen sollte. Die Liste ist allerdings nicht vollständig, sondern basiert auf meiner Erfahrung. Wenn hier Werkzeuge nicht auftauchen, heißt das daher nicht, dass sie nicht funktionieren. Es kann sein, dass ich sie nie benutzt habe, oder nur ein einziges Mal. 
+
+=== Linux
+image::https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg[Tux,250,350]
+
+Linux als Werkzeug zu bezeichnen wird der Sache nicht gerecht. Allerdings kommst Du, wenn Du ernsthaft als DevOps arbeiten willst, um *solide* Linuxkenntnisse nicht herum. Das bedeutet wiederum eine intensive Beschäftigung insbesondere mit der Kommandozeile, die sich unter Linux als _Shell_ darstellt, häufig in Form von <<bash>>.
+Deine Kenntnisse sollten sich im Laufe der Zeit in Richtung <<LPIC-1>>, besser noch <<LPIC-2>> bewegen. Noch besser ist es natürlich, die entsprechenden Prüfungen abzulegen. 
+
+Für <<RedHat>>-Linux gibt es spezifische Zertifizierungen wie <<RHCSA>> (Red Hat Certified System Administrator) und der daran anknüpfende <<RHCE>> (Red Hat Certified Engineer).
+
+=== Automation
+DevOps ohne Automation ergibt sehr wenig bis gar keinen Sinn, schließlich ist ja gerade der Trick, Systeme automatisiert zu provisionieren und zu konfigurieren.
+
+==== Ansible
+image::https://upload.wikimedia.org/wikipedia/commons/2/24/Ansible_logo.svg[Ansible]
 
